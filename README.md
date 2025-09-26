@@ -1,5 +1,11 @@
 # Node-MAW
 
+[![CI](https://github.com/yourusername/node-maw/workflows/CI/badge.svg)](https://github.com/yourusername/node-maw/actions)
+[![npm version](https://badge.fury.io/js/node-maw.svg)](https://www.npmjs.com/package/node-maw)
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+
 A TypeScript client for fetching mobile app versions from App Store and Play Store with separated client architecture.
 
 ## Features
