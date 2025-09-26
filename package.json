@@ -1,0 +1,86 @@
+{
+  "name": "node-maw",
+  "version": "1.0.0",
+  "description": "TypeScript Axios client for fetching app versions from App Store and Play Store",
+  "keywords": [
+    "app-store",
+    "play-store",
+    "version",
+    "axios",
+    "typescript",
+    "client",
+    "mobile-apps",
+    "app-version",
+    "bundle-id",
+    "package-name",
+    "in-app-updates"
+  ],
+  "license": "ISC",
+  "author": "",
+  "homepage": "https://github.com/username/node-maw#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/node-maw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/node-maw/issues"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "ts-node --esm src/index.ts",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "ci": "npm run type-check && npm run build",
+    "prepublishOnly": "npm run ci",
+    "pack:test": "npm pack --dry-run",
+    "publish:dry": "npm publish --dry-run",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major",
+    "test": "node scripts/advanced-test-runner.js dist/__tests__/*.test.js",
+    "test:stop-on-failure": "node scripts/advanced-test-runner.js --stop-on-failure dist/__tests__/*.test.js",
+    "test:watch": "node --test --watch dist/__tests__/*.test.js",
+    "test:debug": "node --inspect-brk=9229 --test dist/__tests__/*.test.js",
+    "test:debug-single": "node --inspect-brk=9229 --test dist/__tests__/node-maw.test.js",
+    "test:core": "node scripts/advanced-test-runner.js --stop-on-failure dist/__tests__/node-maw.test.js",
+    "test:app-store": "node scripts/advanced-test-runner.js --stop-on-failure dist/__tests__/app-store-client.test.js",
+    "test:play-store": "node scripts/advanced-test-runner.js --stop-on-failure dist/__tests__/play-store-client.test.js",
+    "test:ts": "node --loader=ts-node/esm --experimental-specifier-resolution=node --test src/__tests__/*.test.ts",
+    "test:ts-debug": "node --inspect-brk=9229 --loader=ts-node/esm --experimental-specifier-resolution=node --test src/__tests__/*.test.ts",
+    "test:all-failures": "node --test dist/__tests__/*.test.js",
+    "test:verbose": "node --test --reporter spec dist/__tests__/*.test.js",
+    "test:reporter": "node --test --reporter tap dist/__tests__/*.test.js",
+    "pretest": "npm run build"
+  },
+  "dependencies": {
+    "axios": "latest",
+    "google-play-scraper": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "glob": "latest",
+    "ts-node": "latest",
+    "typescript": "latest"
+  }
+}

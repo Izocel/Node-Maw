@@ -1,0 +1,60 @@
+{
+    "compilerOptions": {
+        /* Language and Environment */
+        "target": "ES2022",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "lib": [
+            "ES2022",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        /* Modules */
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        /* Type Checking */
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictBindCallApply": true,
+        "strictPropertyInitialization": true,
+        "noImplicitReturns": true,
+        "noImplicitOverride": true,
+        "noPropertyAccessFromIndexSignature": false,
+        "noUncheckedIndexedAccess": true,
+        /* Emit */
+        "removeComments": false,
+        "importHelpers": true,
+        "downlevelIteration": true,
+        /* Interop Constraints */
+        "isolatedModules": true,
+        "verbatimModuleSyntax": false,
+        /* Completeness */
+        "skipLibCheck": true,
+        /* Advanced */
+        "resolveJsonModule": true,
+        "allowJs": false,
+        "checkJs": false,
+        /* Experimental */
+        "experimentalDecorators": false,
+        "emitDecoratorMetadata": false
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "ts-node": {
+        "esm": true,
+        "experimentalSpecifierResolution": "node"
+    }
+}
