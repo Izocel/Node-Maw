@@ -1,6 +1,6 @@
 {
   "name": "node-maw",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TypeScript Axios client for fetching app versions from App Store and Play Store",
   "keywords": [
     "app-store",
