@@ -17,13 +17,13 @@
   ],
   "license": "ISC",
   "author": "",
-  "homepage": "https://github.com/username/node-maw#readme",
+  "homepage": "https://github.com/Izocel/Node-Maw#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/username/node-maw.git"
+    "url": "git+https://github.com/Izocel/Node-Maw.git"
   },
   "bugs": {
-    "url": "https://github.com/username/node-maw/issues"
+    "url": "https://github.com/Izocel/Node-Maw/issues"
   },
   "type": "module",
   "main": "dist/index.js",
@@ -42,7 +42,7 @@
     "LICENSE"
   ],
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "scripts": {
     "prebuild": "npm run clean",
